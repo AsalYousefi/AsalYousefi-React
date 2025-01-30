@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --purple : #6C63FF;
+}
+.body { 
+    background-color: #fff;
+    color: black;
+}
+.darkmode {
+    background-color: black !important;
+    color: #fff;
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+input,
+.search-box {
+    border: 1px solid var(--purple);
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+.darkmode-btn {
+    background: var(--purple);
+}
+.popup-btn {
+    background: var(--purple);
+    position: fixed;
+    bottom: 20px;
+    right: 7rem;
+}
+.popup-mode {
+    position: relative;
+}
+.dark-screen {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #252525B2;
+}
+.popup {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    background-color: #e7e6f3;
+    z-index: 100;
+    height: 100%;
+}
+.popup-buttons {
+    height: 35vh;
+
+}
+.apply-btn {
+    color: #fff;
+    background: var(--purple);
+}
+.cancel-btn {
+    border: 1px solid var(--purple);
+    background-color: #fff;
+    color: var(--purple);
+}
