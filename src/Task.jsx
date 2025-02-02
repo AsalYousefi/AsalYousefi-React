@@ -1,11 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import EditTask from "./EditTask";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import DeleteTask from "./DeleteTask";
 export default function Task(props) {
-  function taskStatus(e) {
-    setTasks((prev) => { return })
-  }
   return (
     <div className="tasks-list w-75">
       {props.tasks.length > 0 &&
@@ -13,7 +8,7 @@ export default function Task(props) {
           return (
             <div className="task-item px-3 py-2 my-3 d-flex justify-content-between" key={index}>
               <div className="task">
-                <input type="checkbox" name="task" id={index} onChange={taskStatus} />
+                <input type="checkbox" name="task" id={index} />
                 <label htmlFor={index} className="text-uppercase fs-5 mx-3 fw-bold">{task}</label>
               </div>
               <div className="task-icons">
