@@ -52,7 +52,6 @@ input:focus {
     top: 20%;
     background-color: #e7e6f3;
     z-index: 100;
-    height: 100%;
 }
 .popup-buttons {
     height: 35vh;
@@ -66,4 +65,7 @@ input:focus {
     border: 1px solid var(--purple);
     background-color: #fff;
     color: var(--purple);
+}
+main {
+    min-height: 75vh;
 }
