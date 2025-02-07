@@ -70,3 +70,6 @@ input:focus {
 main {
     min-height: 75vh;
 }
+.search-box input {
+    background-color: transparent;
+}
