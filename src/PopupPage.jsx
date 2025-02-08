@@ -9,7 +9,7 @@ export default function PopupPage(props) {
     props.editMode && props.setEditMode(false);
   }
   function addTask() {
-    props.setTasks([...props.tasks, props.taskInput]);
+    props.setTasks([...props.tasks, {taskTitle: props.taskInput, isDone: false}]);
     props.setShowPopup(false);
   }
   return (
