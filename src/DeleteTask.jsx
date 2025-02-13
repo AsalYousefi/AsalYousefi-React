@@ -10,7 +10,7 @@ export default function DeleteTask(props) {
       setTasks(newTasks);
     }
   return (
-    <button onClick={deleteTask}>
+    <button onClick={deleteTask} className="ms-2 delete-btn">
       <FontAwesomeIcon icon={faTrash} />
     </button>
   );

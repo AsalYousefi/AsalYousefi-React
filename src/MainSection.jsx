@@ -15,6 +15,7 @@ export default function MainSection(props) {
           </div>
         ) : (
           <Task
+            setTaskIndex={props.setTaskIndex}
             setEditMode={props.setEditMode}
             editMode={props.editMode}
             tasks={props.tasks}

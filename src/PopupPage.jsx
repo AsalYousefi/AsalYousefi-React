@@ -5,12 +5,23 @@ export default function PopupPage(props) {
     props.setTaskInput(e.target.value);
   }
   function closePopup() {
-    props.setShowPopup(false);
-    props.editMode && props.setEditMode(false);
+    if (props.editMode) {
+      props.setTasks([...props.tasks]);
+      props.setEditMode(false);
+    }
+      props.setShowPopup(false);
+      console.log(props.tasks);
   }
   function addTask() {
     props.setTasks([...props.tasks, {taskTitle: props.taskInput, isDone: false}]);
     props.setShowPopup(false);
+  }
+  function editTask() {
+    const editedTasks = [...props.tasks];
+    editedTasks[props.taskIndex].taskTitle = props.taskInput;
+    props.setTasks(editedTasks);
+    props.setShowPopup(false);
+    props.setEditMode(false);
   }
   return (
     <div className={`popup w-50 mx-auto py-2 px-3 ${props.darkMode ? "darkmode" : "lightmode"}`}>
@@ -33,7 +44,7 @@ export default function PopupPage(props) {
           </button>
           <button
             className="apply-btn rounded-3 text-uppercase fw-bold fs-4 px-3 py-1"
-            onClick={addTask}
+            onClick={props.editMode ? editTask : addTask}
           >
             apply
           </button>

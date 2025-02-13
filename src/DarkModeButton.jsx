@@ -7,7 +7,7 @@ export default function DarkModeButton(props) {
       className="darkmode-btn border-0 px-3 rounded-2"
       onClick={screenHandler}
     >
-      <img src="images/darkmode.svg" alt="" />
+      {props.darkMode ? <img src="images/lightmode.svg" /> :<img src="images/darkmode.svg" alt="" />}
     </button>
   );
 }

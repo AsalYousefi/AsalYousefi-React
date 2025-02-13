@@ -12,15 +12,15 @@ export default function EditTask(props) {
     tasks,
     setTasks,
     index,
+    setTaskIndex
   } = props;
   function editTask() {
     setShowPopup(true);
-    const newTasks = [...tasks];
-    newTasks.splice(index,1);
-    setTasks(newTasks);
+    setEditMode(true);
+    setTaskIndex(index)
   }
   return (
-    <button onClick={editTask}>
+    <button onClick={editTask} className="edit-btn">
       <FontAwesomeIcon icon={faPencil} />
     </button>
   );

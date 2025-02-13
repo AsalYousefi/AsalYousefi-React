@@ -21,11 +21,11 @@ export default function Header(props) {
                 placeholder="Search note..."
               />
               <button className="border-0">
-                <img src="images/search.svg" alt="search-icon" />
+                {props.darkMode ? <img src="images/dark search.svg" /> : <img src="images/search.svg" alt="search-icon" />}
               </button>
             </form>
           </div>
-          <DarkModeButton setDarkMode={props.setDarkMode} />
+          <DarkModeButton setDarkMode={props.setDarkMode} darkMode={props.darkMode} />
         </div>
       </div>
     </header>

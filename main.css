@@ -64,12 +64,54 @@ input:focus {
 }
 .cancel-btn {
     border: 1px solid var(--purple);
-    background-color: #fff;
+    background-color: transparent;
     color: var(--purple);
 }
 main {
     min-height: 75vh;
 }
-.search-box input {
+input[type="search"],
+input[type="text"] {
     background-color: transparent;
+}
+.checkbox {
+    border: 1px solid var(--purple);
+    width: 26px;
+    height: 26px;
+}
+.checked {
+    background: var(--purple);
+}
+.checkbox > * {
+    color: #fff;
+}
+.darkmode .popup {
+    border: 1px solid #fff;
+}
+input[type="text"] {
+    color: #666666;
+}
+.purple-line {
+    background-color: var(--purple);
+    height: 1px;
+}
+
+.task-icons > * {
+    color: #cdcdcd;
+}
+
+.darkmode .search-box {
+    border: 1px solid #f7f7f7;
+}
+
+.edit-btn:hover {
+    color: var(--purple);
+}
+
+.delete-btn:hover {
+    color: #e50000;
+}
+
+.tasks-list {
+    width: 63%;
 }
