@@ -13,6 +13,7 @@
     background-color: #252525 !important;
     color: #fff;
 }
+
 button {
     background-color: transparent;
     border: none;
@@ -114,4 +115,35 @@ input[type="text"] {
 
 .tasks-list {
     width: 63%;
+}
+
+.dropdown button {
+    background: var(--purple);
+    color: #fff !important;
+    width: 150px;
+    font-size: 1.1rem;
+}
+
+.darkmode .search-box input {
+    color: #fff;
+}
+
+.darkmode-btn:hover ,
+.popup-btn:hover {
+    background-color: #534cc2;
+}
+
+.dropdown-menu {
+    min-width: 0 !important;
+    width: 100%;
+    border: 1px solid var(--purple);
+    padding: 0 !important;
+}
+
+.dropdown-item {
+    color: var(--purple);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(108, 99, 255, 0.2);
 }

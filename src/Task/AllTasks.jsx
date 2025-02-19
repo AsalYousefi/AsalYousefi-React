@@ -1,17 +1,16 @@
-import EditTask from "./EditTask";
-import DeleteTask from "./DeleteTask";
+import EditTask from "../EditTask";
+import DeleteTask from "../DeleteTask";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-
-export default function Task(props) {
+export default function AllTasks(props) {
   function taskStatus(index) {
     const updateTask = [...props.tasks];
     updateTask[index].isDone = !updateTask[index].isDone;
     props.setTasks(updateTask);
   }
   return (
-    <div className="tasks-list">
-      {props.tasks.length > 0 &&
+    <>
+      {props.tasks &&
         props.tasks.map((task, index) => {
           return (
             <div key={index}>
@@ -50,6 +49,6 @@ export default function Task(props) {
             </div>
           );
         })}
-    </div>
+    </>
   );
 }

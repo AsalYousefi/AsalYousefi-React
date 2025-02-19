@@ -1,5 +1,5 @@
-import Task from "./Task";
 import PopupButton from "./PopupButton";
+import Tasks from "./Task/Tasks";
 
 export default function MainSection(props) {
   return (
@@ -14,7 +14,7 @@ export default function MainSection(props) {
             <p className="text-center fs-4" style={{fontWeight: 600}}>Empty...</p>
           </div>
         ) : (
-          <Task
+          <Tasks
             setTaskIndex={props.setTaskIndex}
             setEditMode={props.setEditMode}
             editMode={props.editMode}
@@ -23,6 +23,8 @@ export default function MainSection(props) {
             setTasks={props.setTasks}
             setTaskInput={props.setTaskInput}
             taskInput={props.taskInput}
+            selectedFilter={props.selectedFilter}
+            searchItem={props.searchItem}
           />
         )}
       </div>
