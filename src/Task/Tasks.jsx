@@ -47,7 +47,8 @@ export default function Tasks(props) {
           setShowPopup={props.setShowPopup}
         />
       )}
-      {props.searchItem !== null && (
+      {props.searchItem !== null &&
+      props.searchItem != [] && (
         <SearchedItem
           setTasks={props.setTasks}
           tasks={props.tasks}

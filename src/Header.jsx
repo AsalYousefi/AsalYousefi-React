@@ -3,8 +3,19 @@ import DropdownMenu from "./DropdownMenu";
 
 export default function Header(props) {
   function searchItems(e) {
-    const filteredItem = props.tasks.filter(item => item.taskTitle.includes(e.target.value));
-    props.setSearchItem(filteredItem.map((item) => {return item}));
+    if (e.target.value === "") {
+      props.setSearchItem(null);
+    } else {
+      const filteredItem = props.tasks.filter((item) =>
+        item.taskTitle.includes(e.target.value)
+      );
+      props.setSearchItem(
+        filteredItem.map((item) => {
+          return item;
+        })
+      );
+      console.log(e.target.value, props.searchItem);
+    }
   }
   return (
     <header>
@@ -25,12 +36,22 @@ export default function Header(props) {
                 onChange={searchItems}
               />
               <button className="border-0">
-                {props.darkMode ? <img src="images/dark search.svg" /> : <img src="images/search.svg" alt="search-icon" />}
+                {props.darkMode ? (
+                  <img src="images/dark search.svg" />
+                ) : (
+                  <img src="images/search.svg" alt="search-icon" />
+                )}
               </button>
             </form>
           </div>
-          <DropdownMenu setSelectedFilter={props.setSelectedFilter} selectedFilter={props.selectedFilter} />
-          <DarkModeButton setDarkMode={props.setDarkMode} darkMode={props.darkMode} />
+          <DropdownMenu
+            setSelectedFilter={props.setSelectedFilter}
+            selectedFilter={props.selectedFilter}
+          />
+          <DarkModeButton
+            setDarkMode={props.setDarkMode}
+            darkMode={props.darkMode}
+          />
         </div>
       </div>
     </header>

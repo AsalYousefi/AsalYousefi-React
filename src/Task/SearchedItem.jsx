@@ -13,8 +13,8 @@ export default function SearchedItem(props) {
     <>
       {props.searchItem.length > 0 && props.searchItem.map((task, index) => {
         return (
-          <div key={index}>
-            <div className="task-item px-3 py-2 my-3 d-flex justify-content-between">
+          <div key={task.id}>
+            <div className="s task-item px-3 py-2 my-3 d-flex justify-content-between">
               <div className="task d-flex justify-content-between">
                 <button
                   className={`${task.isDone && "checked"} checkbox rounded-1`}

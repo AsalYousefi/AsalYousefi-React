@@ -13,7 +13,7 @@ export default function PopupPage(props) {
       console.log(props.tasks);
   }
   function addTask() {
-    props.setTasks([...props.tasks, {taskTitle: props.taskInput, isDone: false}]);
+    props.setTasks([...props.tasks, {id: props.tasks.length + 1,taskTitle: props.taskInput, isDone: false}]);
     props.setShowPopup(false);
   }
   function editTask() {

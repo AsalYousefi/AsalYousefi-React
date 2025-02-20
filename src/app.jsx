@@ -16,7 +16,7 @@ function App() {
   const [searchItem , setSearchItem] = useState(null);
   return (
     <div className={darkMode ? "darkmode" : showPopup ? "popup-mode" : "lightmode"}>
-      <Header setSearchItem={setSearchItem} setDarkMode={setDarkMode} darkMode={darkMode} tasks={tasks} setSelectedFilter={setSelectedFilter} selectedFilter={selectedFilter} />
+      <Header searchItem={searchItem} setSearchItem={setSearchItem} setDarkMode={setDarkMode} darkMode={darkMode} tasks={tasks} setSelectedFilter={setSelectedFilter} selectedFilter={selectedFilter} />
       <MainSection searchItem={searchItem} selectedFilter={selectedFilter} setEditMode={setEditMode} tasks={tasks}  setTaskIndex={setTaskIndex} setShowPopup={setShowPopup} setTasks={setTasks} setTaskInput={setTaskInput} taskInput={taskInput} />
       {showPopup && <PopupPage taskIndex={taskIndex} darkMode={darkMode} editMode={editMode} setEditMode={setEditMode} tasks={tasks} setTasks={setTasks} setShowPopup={setShowPopup} setTaskInput={setTaskInput} taskInput={taskInput} />}
       {showPopup && <div className="dark-screen"></div>}

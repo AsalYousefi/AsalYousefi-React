@@ -14,8 +14,8 @@ export default function IncompleteTask(props) {
         {props.tasks.map((task, index) => {
           if (!task.isDone) {
             return (
-              <div key={index}>
-                <div className="task-item px-3 py-2 my-3 d-flex justify-content-between">
+              <div key={task.id}>
+                <div className="ic task-item px-3 py-2 my-3 d-flex justify-content-between">
                   <div className="task d-flex justify-content-between">
                     <button
                       className={`${task.isDone && "checked"} checkbox rounded-1`}
