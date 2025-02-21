@@ -17,6 +17,7 @@ export default function EditTask(props) {
   function editTask() {
     setShowPopup(true);
     setEditMode(true);
+    setTaskInput(tasks[index].taskTitle)
     setTaskIndex(index)
   }
   return (
