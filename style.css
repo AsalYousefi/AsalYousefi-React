@@ -1,0 +1,9 @@
+:root {
+    --gray : #343541;
+    --green :
+}
+
+body {
+    background: var(--gray);
+    color: #ffffff;
+}
