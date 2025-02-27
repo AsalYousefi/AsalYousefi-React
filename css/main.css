@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --gray : #343541;
+    --green : #0FA47F;
+}
+
+.welcome-page {
+    min-height: 100vh;
+    background: var(--gray);
+    color: #ffffff;
+}
+
+.logo {
+    width: 39px;
+}
+
+a {
+    background: var(--green);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-page {
+    background-color: #ffffff;
+    min-height: 75vh;
+    color: #2E3339;
+}
+
+.email-label {
+    color: #C3C8CF;
+    top: 5%;
+    left: 5%;
+}
+
+.border-gray {
+    border: 1px solid #C3C8CF;
+}
+
+.email-input:focus {
+    outline: 1px solid var(--green);
+    border: none;
+}
+
+.email-input:focus + .email-label {
+    top: -15px;
+    left: 10px;
+    background-color: #ffffff;
+    color: var(--green) ;
+}
+.line {
+    height: 1px;
+    background-color: #C3C8CF;
+}
+
+.span {
+    top: -10px;
+    background-color: #ffffff;
+    left: 40%;
+}
+
+.change-page-btn {
+    background-color: #ffffff !important;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #c1c1c1;
+    background-color: transparent;
+}
+
+.recaptcha-logo {
+    width: 31px;
+}
+
+.checked {
+    background: var(--green);
+}
