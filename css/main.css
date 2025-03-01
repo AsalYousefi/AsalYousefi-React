@@ -32,7 +32,7 @@ a {
 
 .email-label {
     color: #C3C8CF;
-    top: 5%;
+    top: 7%;
     left: 5%;
 }
 
@@ -59,11 +59,12 @@ a {
 .span {
     top: -10px;
     background-color: #ffffff;
-    left: 40%;
+    left: 42%;
 }
 
 .change-page-btn {
     background-color: #ffffff !important;
+    color: var(--green) !important;
 }
 
 .checkbox {
@@ -73,10 +74,57 @@ a {
     background-color: transparent;
 }
 
-.recaptcha-logo {
+.form-logo {
     width: 31px;
 }
 
 .checked {
     background: var(--green);
+}
+
+.checkbox > * {
+    color: #ffffff;
+}
+
+.py-75 {
+    padding-block: 0.75rem;
+}
+
+.leftside {
+    background-color: #202123;
+    width: 20%;
+}
+
+.chat-page {
+    background-color: #343541;
+    width: 80%;
+}
+
+.chatbot-page {
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.chatbot-dark {
+    color: #202123 !important;
+}
+
+.new-chat-btn,
+.leftside-options > * {
+    background-color: transparent;
+    border: 1px solid #444654;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.leftside-options {
+    border-top: 1px solid #444654;
+}
+
+.leftside-options > * {
+    border: none !important;
 }
