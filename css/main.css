@@ -109,11 +109,11 @@ a {
     color: #202123 !important;
 }
 
-.new-chat-btn,
-.leftside-options > * {
-    background-color: transparent;
+.new-chat-btn {
     border: 1px solid #444654;
-    cursor: pointer;
+}
+
+.leftside {
     font-size: 13px;
 }
 
@@ -125,6 +125,33 @@ a {
     border-top: 1px solid #444654;
 }
 
-.leftside-options > * {
-    border: none !important;
+.h-full {
+    height: 100vh;
+}
+
+.description-link {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #9A9B9F;
+}
+
+.description {
+    font-size: 12px;
+    color: #9A9B9F;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+}
+
+.chatbot-description {
+    background-color: #444654;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.chatbox {
+    border: 1px solid #444654;
 }
