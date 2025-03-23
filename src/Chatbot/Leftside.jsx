@@ -10,19 +10,27 @@ import Chats from "./Chats";
 
 export default function Leftside(props) {
   function addChat() {
-    props.setChats((prev) => {return [...prev, {id:props.chats.length + 1}]})
+    props.chats.map((chat) => {
+      if (chat.isActive) chat.isActive = !chat.isActive;
+    })
+    props.setChats((prev) => {
+      return [...prev, { id: props.chats.length + 1, title: "", messages: [], isActive: true }];
+    });
   }
   return (
     <div className="leftside p-2 d-flex flex-column justify-content-between">
       <div>
-        <div className="new-chat-btn d-flex px-2 py-75 w-100 text-start rounded-1" onClick={addChat}>
+        <div
+          className="new-chat-btn pointer d-flex px-2 py-75 w-100 text-start rounded-1"
+          onClick={addChat}
+        >
           <div className="mx-2">
             <PlusIcon />
           </div>
           <span className="mx-1">New chat</span>
         </div>
+        <Chats chats={props.chats} setChats={props.setChats} />
       </div>
-      <Chats chats={props.chats} />
       <div className="leftside-options">
         <div className="d-flex bg-transparent px-2 py-75 w-100 text-start">
           <div className="mx-2">

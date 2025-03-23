@@ -51,6 +51,7 @@ a {
     background-color: #ffffff;
     color: var(--green) ;
 }
+
 .line {
     height: 1px;
     background-color: #C3C8CF;
@@ -109,16 +110,13 @@ a {
     color: #202123 !important;
 }
 
-.new-chat-btn {
+.new-chat-btn,
+.chat {
     border: 1px solid #444654;
 }
 
 .leftside {
     font-size: 13px;
-}
-
-.bg-transparent {
-    background-color: transparent;
 }
 
 .leftside-options {
@@ -154,4 +152,21 @@ a {
 
 .chatbox {
     border: 1px solid #444654;
+}
+
+.active {
+    background-color: #343540;
+}
+
+.chat-options path {
+    stroke: #C5C5D1;
+}
+
+.chat-input {
+    color: #ffffff !important;
+}
+
+.chat-input:focus {
+    border: none !important;
+    box-shadow: none !important;
 }
