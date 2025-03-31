@@ -170,3 +170,18 @@ a {
     border: none !important;
     box-shadow: none !important;
 }
+
+.message {
+    background-color: #F3F3F3;
+    color: black;
+    max-width: 75%;
+}
+
+/* .light { */
+    /* background-color: #ffffff !important; */
+/* } */
+
+.light > * {
+    color: black;
+    background-color: #ffffff !important;
+}
