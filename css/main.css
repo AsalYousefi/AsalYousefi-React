@@ -163,7 +163,7 @@ a {
 }
 
 .chat-input {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .chat-input:focus {
@@ -177,11 +177,27 @@ a {
     max-width: 75%;
 }
 
-/* .light { */
-    /* background-color: #ffffff !important; */
-/* } */
-
 .light > * {
-    color: black;
+    color: black !important;
     background-color: #ffffff !important;
+}
+
+.light .chatbot-description {
+    background-color: #f9f9f9;
+}
+
+.light input {
+    color: black;
+}
+
+.light .active {
+    background-color: #c1c1c1;
+}
+
+.light path {
+    stroke: black;
+}
+
+.light .fill path {
+    fill: black;
 }

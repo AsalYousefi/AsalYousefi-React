@@ -17,6 +17,16 @@ export default function Leftside(props) {
       return [...prev, { id: props.chats.length + 1, title: "", messages: [], isActive: true }];
     });
   }
+
+  function deleteChat() {
+    props.chats.map((chat, index) => {
+      if (chat.isActive) {
+        const updateChats = [...props.chats];
+        updateChats.splice(index, 1);
+        props.setChats(updateChats);
+      }
+    })
+  }
   return (
     <div className="leftside p-2 d-flex flex-column justify-content-between">
       <div>
@@ -32,24 +42,25 @@ export default function Leftside(props) {
         <Chats chats={props.chats} setChats={props.setChats} />
       </div>
       <div className="leftside-options">
-        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start">
+        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start pointer"
+        onClick={deleteChat}>
           <div className="mx-2">
             <DeleteIcon />
           </div>
           <span className="mx-1">Clear conversations</span>
         </div>
-        <div className="bg-transparent px-2 py-75 w-100 text-start" 
+        <div className="bg-transparent px-2 py-75 w-100 text-start pointer" 
          onClick={() => props.setIsLight((prev) => !prev)}>
           <img src="images/contrast.svg" alt="" className="mx-2" />
           <span className="mx-1">Light mode</span>
         </div>
-        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start">
+        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start pointer">
           <div className="mx-2">
             <DiscordIcon />
           </div>
           <span className="mx-1">OpenAI Discord</span>
         </div>
-        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start">
+        <div className="d-flex bg-transparent px-2 py-75 w-100 text-start pointer">
           <div className="mx-2">
             <EnlargeIcon />
           </div>

@@ -24,11 +24,11 @@ export default function Chats(props) {
             <div
               className={`chat ${
                 chat.isActive && "active"
-              } d-flex justify-content-between align-items-center px-2 py-75 my-1`}
+              } d-flex justify-content-between align-items-center px-2 py-75 my-1 pointer`}
               key={chat.id}
             >
               <div
-                className="d-flex overflow-hidden"
+                className="d-flex overflow-hidden w-75"
                 onClick={() => showChat(index)}
               >
                 <div className="mx-1">
