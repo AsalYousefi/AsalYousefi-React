@@ -201,3 +201,12 @@ a {
 .light .fill path {
     fill: black;
 }
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.light a {
+    color: black !important;
+}

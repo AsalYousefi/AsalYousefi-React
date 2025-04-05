@@ -51,8 +51,8 @@ export default function Leftside(props) {
         </div>
         <div className="bg-transparent px-2 py-75 w-100 text-start pointer" 
          onClick={() => props.setIsLight((prev) => !prev)}>
-          <img src="images/contrast.svg" alt="" className="mx-2" />
-          <span className="mx-1">Light mode</span>
+          <img src={props.isLight ? "images/darkmode.svg" : "images/contrast.svg"} alt="" className="icon mx-2" />
+          <span className="mx-1">{props.isLight ? "Dark" : "Light"} mode</span>
         </div>
         <div className="d-flex bg-transparent px-2 py-75 w-100 text-start pointer">
           <div className="mx-2">
