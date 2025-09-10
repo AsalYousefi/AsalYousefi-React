@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white !important;
+}
+
+.header {
+    height: 96px;
+}
+
+
+.h-full {
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    body {
+        background-image: url("/background-home-tablet.jpg");
+    }
+    nav {
+        width: 83% !important;
+    }
+    nav li {
+        padding-top: 2.2rem !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url("/background-home-desktop.jpg") !important;
+    }
+    nav {
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .explore {
+        width: 200px !important;
+        height: 200px !important;
+        font-size: 25px !important;
+    }
+    .homepage-text {
+        width: 45% !important;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.menu,
+nav {
+    background: rgba(11, 13, 23, .15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    width: 60%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu .active {
+    border-right: 4px solid white;
+}
+
+nav .active {
+    border-bottom: 4px solid white;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav li {
+    font-size: 14px;
+}
+
+.line {
+    height: 1px;
+    background-color: #979797;
+    z-index: 10;
+    left: 10%;
+    width: 41%;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.homepage h1 {
+    font-size: 7rem;
+}
+
+.text-blue {
+    color: #D0D6F9;
+}
+
+.description {
+    font-size: 13.5px;
+}
+
+.text-fs {
+    font-size: 18px;
+}
+
+.explore {
+    width: 144px;
+    height: 144px;
+    font-size: 20px;
+    color: #0B0D17;
+    transition: .5 ease-in-out;
+}
+
+.explore:hover {
+    color: var(--bs-secondary);
+    box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0.1);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.hover {
+    transition: .5s ease-in-out;
+}
+
+.menu-item:hover {
+    border-right: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu-icon ,
+.close-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-item:hover {
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+}
