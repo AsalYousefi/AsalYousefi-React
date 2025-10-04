@@ -1,7 +1,4 @@
 import { useState } from "react"
-import { HiMiniBars3 } from "react-icons/hi2"
-// import { HiBars3 } from "react-icons/hi2"
-import { VscChromeClose } from "react-icons/vsc"
 
 export default function Header() {
 
@@ -28,7 +25,6 @@ export default function Header() {
                     </div>
                     <div className={`pointer menu-btn d-flex flex-column justify-content-between ${isOpen && "open"}`} onClick={() => setIsOpen((prev) => !prev)}
                         style={{transform: open ? "rotate(180deg)" : "rotate(0deg)"}}>
-                        {/* {isOpen ? <VscChromeClose /> :<HiMiniBars3 />} */}
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
